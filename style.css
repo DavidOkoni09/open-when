@@ -1,0 +1,144 @@
+:root {
+    --primary-pink: #f8bbd0;
+    --dark-pink: #c2185b;
+    --paper-color: #fff9c4;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff5f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.envelope-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 40px;
+}
+
+.envelope {
+    background-color: var(--primary-pink);
+    border: 2px solid var(--dark-pink);
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+}
+
+.envelope:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 10px 10px 25px rgba(0,0,0,0.15);
+}
+
+.stamp {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+/* THE IMPORTANT PART: The Letter Content */
+#letterText {
+    /* Using Dancing Script for that handwritten feel */
+    font-family: 'Dancing Script', cursive;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+    overflow-y: auto;
+}
+
+/* Style the headers inside the letter specifically */
+#letterText h2 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color: var(--dark-pink);
+    margin-bottom: 15px;
+    border-bottom: 1px dashed var(--primary-pink);
+    display: inline-block;
+}
+
+.modal-content {
+    background-color: var(--paper-color);
+    margin: 10% auto;
+    padding: 40px;
+    width: 80%;
+    overflow-y: auto;
+    max-width: 500px;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    min-height: 300px;
+    max-height: 70vh;
+    line-height: 1;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.counter-container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(248, 187, 208, 0.4);
+    margin-bottom: 30px;
+    border: 1px solid var(--primary-pink);
+}
+
+.counter-container p {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.7rem;
+    color: #888;
+    margin-bottom: 5px;
+    animation: heartbeat 3s infinite ease-in-out;
+}
+
+#together-counter {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--dark-pink);
+}
+
+#together-counter span {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
