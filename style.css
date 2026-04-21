@@ -62,7 +62,8 @@ body {
 #letterText {
     /* Using Dancing Script for that handwritten feel */
     font-family: 'Dancing Script', cursive;
-    font-size: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
     color: #444;
     line-height: 1.5;
     overflow-y: auto;
@@ -104,6 +105,16 @@ body {
     box-shadow: 0 4px 15px rgba(248, 187, 208, 0.4);
     margin-bottom: 30px;
     border: 1px solid var(--primary-pink);
+}
+
+.letter-link {
+    text-decoration: none;
+    color: rgb(254, 169, 22);
+    background-color: antiquewhite;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+
 }
 
 .counter-container p {

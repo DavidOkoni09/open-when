@@ -8,11 +8,48 @@ const letters = {
         <p>If you're looking in the mirror and doubting what you see, or if you're doubting your worth—stop. Let me tell you what I see.</p>
         <p>I see a woman who is incredibly beautiful, intelligent, and kind. You have a way of making everything better just by being there. You don't need to be "perfect", for me; you are already everything I’ve ever wanted. You are enough, Victory. Always.</p>
     `,
+    'proud': `
+        <h2>Yesss! I knew you could do it! 🥂</h2>
+        <p>Whether you just aced a test, finished a tough day, or finally figured out that one thing that was bothering you—I am SO proud of you.</p>
+        <p>You work so hard, and seeing your success makes me the happiest man alive. Take a moment to celebrate yourself. You deserve it!</p>
+    `,
+    'hug': `
+        <h2>A Virtual Hug (Hold for 5 seconds) 🫂</h2>
+        <p>I wish I could wrap my arms around you right now. Since I can’t, I want you to wrap your arms around yourself, close your eyes, and imagine me squeezing you tight.</p>
+        <p>I’m sending you all my warmth and energy. Stay there for a moment. I’ve got you, Little dove.</p>
+    `,
+    'how-much': `
+        <h2>The Impossible Question ♾️</h2>
+        <p>You asked for a measurement, but I'm an engineer—and some things are just mathematically infinite.</p>
+        <p>I love you more than there are lines of code in this site, more than there are stars over Calabar, and more than I love getting a complex structural calculation right on the first try. You are my greatest 'project' and my favorite person.</p>
+    `,
+    'seizure': `
+        <h2>Hey my strong girl</h2>
+        <p>If you're reading this one then, its probably one of those moments I want to badly hold your hand and kiss you're forehead and just let you know I love you and you're okay.</p>
+        <p>I want you to think of my hand over yours, call me or text me, no matter how late. I would always have time for the brightest person in my life (YOU). I LOVE YOU💖💖</p>
+    `,
+    'birthday': `
+        <h2>Happy birthday baby</h2>
+        <p>Its finally your birthday and truth be told I've been anticipaing it more than youu have. Happy birthday my love.</p>
+        <a href="https://osuwake.netlify.app/" target="_blank" class="letter-link">Click to open Birthday Gift</a>
+    `
 };
 
 function openLetter(theme) {
     const modal = document.getElementById("letterModal");
     const content = document.getElementById("letterText");
+
+    if(theme === 'birthday') {
+        const today = new Date();
+        // Set the birthday: Year, Month (0-11), Day
+        // Remember: April is month 3 in JS (0=Jan, 1=Feb, 2=Mar, 3=Apr)
+        const birthday = new Date(2026, 6, 26);
+
+        if (today < birthday) {
+            alert("Nice try, Victory! ❤️ This one only opens on your actual birthday. Patience is a virtue!");
+            return; // Stops the function from opening the modal
+        }
+    }
 
     content.innerHTML = letters[theme];
     modal.style.display = "block";
