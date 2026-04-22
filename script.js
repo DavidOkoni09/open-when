@@ -28,6 +28,26 @@ const letters = {
         <p>If you're reading this one then, its probably one of those moments I want to badly hold your hand and kiss you're forehead and just let you know I love you and you're okay.</p>
         <p>I want you to think of my hand over yours, call me or text me, no matter how late. I would always have time for the brightest person in my life (YOU). I LOVE YOU💖💖</p>
     `,
+    'long-day': `
+        <h2>Hang in there, Scholar! 🎓</h2>
+        <p>I know those long hours at School can be draining. Whether it's a boring lecture or just the heat getting to you, remember why you're doing this.</p>
+        <p>You’re building your future, and I’m right here cheering you on. When you're done, take a walk, get some cold water, and know that I’m waiting to hear all about your day. You've got this, Victory!</p>
+    `,
+    'no-sleep': `
+        <h2>Go to sleep, sleepyhead 🌙</h2>
+        <p>If you're reading this, it's probably late and your brain won't shut off. I wish I was there to tuck you in or talk you to sleep.</p>
+        <p>Try to clear your mind. Think of the quietest, most peaceful place we've been together. I'm sending you a virtual forehead kiss. Rest well, my love—you need your energy for tomorrow.</p>
+    `,
+    'appreciated': `
+        <h2>I see you, Victory. ❤️</h2>
+        <p>I don't just love you for the big moments; I love you for the way you handle the small ones. I appreciate how you support me, how you chase your dreams, and even the way you laugh at my dumb jokes.</p>
+        <p>You make my life so much better just by existing in it. Never doubt how much you mean to me.</p>
+    `,
+    'date-night': `
+        <h2>A Raincheck for Romance 🥂</h2>
+        <p>If we haven't seen each other in a while, I'm probably feeling it just as much as you are. I miss our walks and our talks.</p>
+        <p>Consider this letter a "coupon" for our next outing. Once we're both free, the choice of where we go is 100% yours. I can't wait to hold your hand again.</p>
+    `,
     'birthday': `
         <h2>Happy birthday baby</h2>
         <p>Its finally your birthday and truth be told I've been anticipaing it more than youu have. Happy birthday my love.</p>
