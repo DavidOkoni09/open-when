@@ -61,9 +61,9 @@ body {
 /* THE IMPORTANT PART: The Letter Content */
 #letterText {
     /* Using Dancing Script for that handwritten feel */
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.4rem;
-    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
     color: #444;
     line-height: 1.5;
     overflow-y: auto;
@@ -71,8 +71,9 @@ body {
 
 /* Style the headers inside the letter specifically */
 #letterText h2 {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Great Vibes', cursive;
     font-weight: 700;
+    font-size: 2rem;
     color: var(--dark-pink);
     margin-bottom: 15px;
     border-bottom: 1px dashed var(--primary-pink);
@@ -153,3 +154,36 @@ body {
     }
 }
 
+.compliment-display {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#compliment-text {
+    font-family: 'Great Vibes', cursive;
+    /* The romantic font from earlier */
+    font-size: 1.8rem;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.heart {
+    font-size: 4rem;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    user-select: none;
+    /* Prevents highlighting the emoji on double click */
+}
+
+#gen-btn {
+    background-color: #8b2635;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}

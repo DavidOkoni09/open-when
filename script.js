@@ -105,6 +105,54 @@ function updateCounter() {
     document.getElementById("minutes").innerText = minutes;
 }
 
+const heartBtn = document.getElementById('heart-btn');
+const countDisplay = document.getElementById('kiss-count');
+
+// Load existing count or start at 0
+let kisses = localStorage.getItem('kissesCount') || 0;
+countDisplay.innerText = kisses;
+
+heartBtn.addEventListener('click', () => {
+    kisses++;
+    countDisplay.innerText = kisses;
+    localStorage.setItem('kissesCount', kisses);
+
+    // Optional: Add a little "pop" animation
+    heartBtn.style.transform = "scale(1.3)";
+    setTimeout(() => heartBtn.style.transform = "scale(1)", 100);
+});
+
+const reasons = [
+    "The way your eyes light up when you're excited.",
+    "Your incredible strength and resilience.",
+    "How you make even the simplest moments feel like an adventure.",
+    "Your kindness toward everyone you meet.",
+    "The way you support my dreams as a developer.",
+    "Your laugh—it's my favorite sound in the world.",
+    "The way you handle challenges with such grace.",
+    "How thoughtful you were with our 'Open When' letters.",
+    "The peace I feel just being in your presence.",
+    "The way you've made me a better person since we met.",
+    "The way you look at me when I'm doing something you love.",
+    "I love how you're so intelligent and always have something interesting to say.",
+    "The way you care for me and support my dreams."
+];
+
+const genBtn = document.getElementById('gen-btn');
+const textDisplay = document.getElementById('compliment-text');
+
+genBtn.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * reasons.length);
+
+    // Add a fade effect
+    textDisplay.style.opacity = 0;
+
+    setTimeout(() => {
+        textDisplay.innerText = reasons[randomIndex];
+        textDisplay.style.opacity = 1;
+    }, 200);
+});
+
 // Update the counter every minute
 setInterval(updateCounter, 60000);
 updateCounter(); // Run once immediately
